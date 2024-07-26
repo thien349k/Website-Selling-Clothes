@@ -1,7 +1,5 @@
 @extends('admin.main')
 @section('content')
-<form method="post" id="form" ectype="multipart/form-data">
-
   <div class="admin-content-main-content-product-add">
   <div class="admin-content-main-content-left">
     <div class="admin-content-main-content-two-input">
@@ -18,18 +16,19 @@
   </div>
     <div class="admin-content-main-content-right">
       <div class="admin-content-main-content-right-image">
-        <label id="editor" for="file">Ảnh Đại Diện</label>
-        <input id="file" type="file" name="product_image" />
-        <div class="image-show"></div>
+        <label for="file">Ảnh Đại Diện</label>
+        <input id="file" type="file"/>
+        <input type="hidden" name="image" id="input-file-img-hiden">
+        <div class="image-show" id="input-file-img"></div>
       </div>
       <div class="admin-content-main-content-right-images">
-        <label for="file">Ảnh sản phẩm</label>
-        <input id="files" type="files" />
-        <div class="images-show"></div>
+        <label for="files">Ảnh sản phẩm</label>
+        <input id="files" type="file" multiple/>
+        
+        <div class="images-show" id="input-file-imgs"></div>
       </div>
     </div>
   </div>
-</form>
 @endsection
 @section('footer')
 <script src="{{asset('backend/asset/js/product_ajax.js')}}"></script>
