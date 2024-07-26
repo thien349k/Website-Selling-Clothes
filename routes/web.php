@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controller\Admin\uploadController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/admin/order_detail', function () {
@@ -20,7 +20,7 @@ Route::get('/admin/product_add', function () {
 Route::get('/admin', function () {
     return view('admin.home');
 });
-
+Route::post('/upload',[uploadController::class,'uploadImage']);
 Route::get('/', function () {
     return view('welcome');
 });
