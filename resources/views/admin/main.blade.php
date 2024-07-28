@@ -14,7 +14,7 @@
           </div>
           <div class="admin-content-main">
             <div class="admin-content-main-title">
-              <h1>Dashboard</h1>
+              <h1>{{isset($title)? $title : 'Dashboard'}}</h1>
             </div>
             <div class="admin-content-main-content">
               <!-- noi dung -->

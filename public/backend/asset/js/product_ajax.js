@@ -47,7 +47,7 @@ $("#files").on("change", () => {
                             result.paths[index] +
                             '" alt=""><input type="hidden" value="' +
                             result.paths[index] +
-                            '" class="product-images" name="product_images[]"><input type="hidden" value=" result.paths[index]" name="images[]">';
+                            '" class="product-images" name="images[]">';
                         $("#input-file-imgs").html(html);
                     }
                 }
