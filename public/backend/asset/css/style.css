@@ -208,7 +208,7 @@ li {
     height: 40px;
     border: none;
     background-color: var(--sub-bg-color);
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     outline: none;
     border-radius: var(--main-border-radius);
     padding-left: 6px;
@@ -299,4 +299,14 @@ td {
 #input-file-imgs img {
     width: 70px;
     margin-right: 10px;
+}
+
+.text-danger {
+    color: red;
+    display: block;
+    margin-top: 11px;
+}
+
+.can {
+    margin-right: 50px;
 }

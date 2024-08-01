@@ -28,8 +28,8 @@
             <td>{{number_format($product -> price_sale)}}</td>
             <td>{{$product -> created_at}}</td>
             <td>
-              <a class="edit-class" href="">Sửa</a>
-              <a class="delete-class" href="">Xóa</a>
+              <a class="edit-class" href="/admin/product/edit/{{$product -> id}}">Sửa</a>
+              <a onclick="removeRow(product_id={{$product -> id}},url='/admin/product/delete')" class="delete-class" href="#">Xóa</a>
             </td>
           </tr>    
         @endforeach
@@ -38,4 +38,24 @@
     </head>
   </table>
 </div>
+@endsection
+@section('footer')
+  <script>
+    //delete
+    function removeRow(product_id, url) {
+      if (confirm("Bạn chắc chắn muốn xóa Sản Phẩm này?")) {
+        $.ajax({
+          url: url,
+          data: { product_id },
+          method: "GET",
+          dataType: "JSON",
+          success: function (res) {
+              if(res.success == true){
+                location.reload();
+              }
+          },
+        });
+      }
+    }
+  </script>
 @endsection
